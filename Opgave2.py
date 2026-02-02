@@ -19,10 +19,8 @@ while (guesses_remaining > 0):
         if guess <= 0 or guess > 100:
             guesses_remaining = 0
         elif guess == secret_number:
-            print("Rigtigt gæt!")
-            guesses_remaining = 7
-            secret_number = random.randint(1, 100)
-            guesses = array('i', [])
+            print("Rigtigt gæt! Tak fordi du spillede med...")
+            guesses_remaining = 0
         elif guess < secret_number:
             print("Det hemmelige tal er højere end dit gæt")
             guesses.append(guess)
