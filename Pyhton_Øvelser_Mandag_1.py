@@ -6,6 +6,11 @@
 # tom liste = NavnPåListe = []
 # tilføj til liste = NavnPåListe.append(DetDerSkalTilføjes)
 # conditional liste = Ændre
+# dictionaries angives i {key: value}
+# sets er {} (unikke elementer)
+# arrays skal "importes" fra array
+# random skal "importes" fra random
+# switches er "match"
 
 # liste = [1,2,2,3,4,5]
 # print(liste)

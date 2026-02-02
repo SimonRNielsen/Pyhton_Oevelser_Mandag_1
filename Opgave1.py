@@ -42,7 +42,6 @@ def feed_animal():
     else:
         print("No animals found to be fed")
 
-
 while (playing):
     print("Type \"1\" to add animal", "Type \"2\" to feed animal", "Type \"3\" to move animal to between pens", "Type \"9\" to stop playing", sep= '\n')
     do_this = input()
@@ -52,18 +51,7 @@ while (playing):
             for i in animals:
                 print(a, i)
                 a = a + 1
-            animal = input("Type number of animal you want to add")
-            match animal:
-                case "1":
-                    animal = animals[0]
-                case "2":
-                    animal = animals[1]
-                case "3":
-                    animal = animals[2]
-                case "4":
-                    animal = animals[3]
-                case "5":
-                    animal = animals[4]
+            animal = animals[int(input("Type number of animal you want to add")) - 1]
             match input("Type \"1\" to add it to carnivore pen or \"2\" for herbivore pen"):
                 case "1":
                     add_to_pen_list = carnivores
