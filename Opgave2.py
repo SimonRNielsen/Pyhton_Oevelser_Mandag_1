@@ -2,16 +2,15 @@ from array import array
 import random
 
 guesses = array('i', [])
+playing = True
+guesses_remaining = 7
+secret_number = random.randint(1, 100)
 
 def validate_input(input: str):
     if input.isdigit() and int(input) not in guesses:
         return True
     else:
         return False
-
-playing = True
-guesses_remaining = 7
-secret_number = random.randint(1, 100)
 
 while (guesses_remaining > 0 and playing):
     guess = input(f"Gæt et tal mellem 1-100, du har {guesses_remaining} gæt, eller skriv et tal udover grænserne for at afslutte\n")
