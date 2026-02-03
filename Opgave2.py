@@ -9,10 +9,11 @@ def validate_input(input: str):
     else:
         return False
 
+playing = True
 guesses_remaining = 7
 secret_number = random.randint(1, 100)
 
-while (guesses_remaining > 0):
+while (guesses_remaining > 0 and playing):
     guess = input(f"Gæt et tal mellem 1-100, du har {guesses_remaining} gæt, eller skriv et tal udover grænserne for at afslutte\n")
     if validate_input(guess):
         guess = int(guess)
@@ -20,7 +21,7 @@ while (guesses_remaining > 0):
             guesses_remaining = 0
         elif guess == secret_number:
             print("Rigtigt gæt! Tak fordi du spillede med...")
-            guesses_remaining = 0
+            playing = False
         elif guess < secret_number:
             print("Det hemmelige tal er højere end dit gæt")
             guesses.append(guess)
