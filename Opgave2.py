@@ -12,7 +12,7 @@ def validate_input(input: str):
     else:
         return False
 
-while (guesses_remaining > 0 and playing):
+while guesses_remaining > 0 and playing:
     guess = input(f"Gæt et tal mellem 1-100, du har {guesses_remaining} gæt, eller skriv et tal udover grænserne for at afslutte\n")
     if validate_input(guess):
         guess = int(guess)

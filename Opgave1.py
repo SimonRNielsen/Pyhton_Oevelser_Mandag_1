@@ -42,7 +42,7 @@ def feed_animal():
     else:
         print("No animals found to be fed")
 
-while (playing):
+while playing:
     print("Type \"1\" to add animal", "Type \"2\" to feed animal", "Type \"3\" to move animal to between pens", "Type \"9\" to stop playing", sep= '\n')
     do_this = input()
     match do_this:

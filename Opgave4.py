@@ -1,16 +1,17 @@
 replies = { "Ja": True, "Nej": False, "Næh": False, "Absolut ikke": False}
-questions = { "Er dette en quiz?": replies, "Er det en træls opgave?": replies, "Skal den bare hurtig overstås?": replies }
+quiz = { "Er dette en quiz?": replies, "Er det en træls opgave?": replies, "Skal den bare hurtig overstås?": replies }
 correct = 0
 wrong = 0
 
 def ask_question(question):
-    answers = questions[question]
-    print(f"{question} - svarmuligheder: {list(answers.keys())}")
-    answer = input("Vælg et svar:\n").capitalize()
-    return questions[question][answer]
+    print(f"{question} - svarmuligheder: {list(quiz[question].keys())}")
+    answer = ""
+    while answer not in quiz[question]:
+        answer = input("Angiv et gyldigt svar:\n").capitalize()
+    return quiz[question][answer]
 
-for i in questions:
-    if (ask_question(i)):
+for question in quiz:
+    if (ask_question(question)):
         print("Korrekt svar!")
         correct += 1
     else:
