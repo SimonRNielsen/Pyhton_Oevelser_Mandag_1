@@ -1,5 +1,4 @@
-# sep = separator - alt hvad der bliver printet adskilles med det tegn
-# end = hvad der bliver printet til sidst i print funktionen (default er newline (\n))
+# sep = separator - alt hvad der bliver printet adskilles med det tegn / end = hvad der bliver printet til sidst i print funktionen (default er newline (\n)) / For loop til enkelte elementer
 # elif = else if
 # metoder = def metode - indentering for at definere scopet
 # range = defineret længde, len(#NavnPåListe#) = count/length
