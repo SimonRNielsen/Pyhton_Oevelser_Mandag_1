@@ -10,7 +10,7 @@ def ask_question(question):
     return questions[question][answer]
 
 for i in questions:
-    if (ask_question(i) is True):
+    if (ask_question(i)):
         print("Korrekt svar!")
         correct += 1
     else:
