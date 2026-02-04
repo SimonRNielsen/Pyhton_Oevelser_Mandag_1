@@ -1,8 +1,6 @@
 import random
 
-consumables = []
-monsters = []
-gear = []
+consumables, monsters, gear = [], [], []
 unsorted_list = [('Bread', 'Consumable'), ('Mystery Meat', 'Consumable'), ('Dragon', 'Monster'), ('Beholder', 'Monster'), ('Sword', 'Gear'), ('Armor', 'Gear')]
 
 def sort_item(selected: str):
