@@ -24,4 +24,4 @@ while (len(unsorted_list) > 0):
     print(f"Sort the following item into the correct list (Consumable, Monster or Gear): {unsorted_list[random_selection][0]}")
     sort_item(input())
 print("Congratulations, you correctly sorted all objects")
-print(consumables + monsters + gear, sep='\n')
+print(consumables, monsters, gear, sep='\n')
