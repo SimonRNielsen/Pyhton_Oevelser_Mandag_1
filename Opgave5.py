@@ -1,7 +1,6 @@
 valid_answers = { "ALT", "STALD", "SALT", "TAL", "DAL", "STAD", "LAD", "SAD" }
 letters = {"A", "L", "T", "S", "D"}
 correct_answers = []
-playing = True
 total_score = 0
 
 def create_word(answer: str):
@@ -16,18 +15,18 @@ def create_word(answer: str):
     elif (answer in valid_answers):
         correct_answers.append(answer)
         print("Godtaget svar!")
-        return answer.__len__()
+        return len(answer)
     else:
         print("Ordet er ikke en gyldig svarmulighed!")
         return 0
 
-while (len(valid_answers) != len(correct_answers) and playing):
+while (len(valid_answers) != len(correct_answers)):
     if (len(correct_answers) > 0):
         print("Du har gættet følgende ord så vidt:", correct_answers, f"\nDer mangler at blive gættet {len(valid_answers) - len(correct_answers)} af de angivne muligheder")
     print("Lav et ord ud fra følgende bogstaver eller skriv \"exit for at stoppe\":", letters)
     score = create_word(input().upper())
     if (score < 0):
-        playing = False
+        break
     else:
         total_score += score
 print("Du opnåede en score på:", total_score)
